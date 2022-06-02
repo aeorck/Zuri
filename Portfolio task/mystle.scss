@@ -1,0 +1,298 @@
+$colorgrey: #393E46;
+$colorteal: #00ADB5;
+$textcolor: #EEEEEE;
+$back: #222831;
+$fontcomfort:"Comfortaa",
+"Times New Roman";
+$font2:"Josefin Sans",
+sans-serif;
+
+* {
+    box-sizing: border-box;
+
+}
+
+body {
+    background-color: $back;
+    color: $textcolor;
+    font-family: $font2;
+    font-weight: 400;
+}
+
+header {
+    position: sticky;
+    top: 2px;
+    z-index: 1;
+    // box-shadow: 5px 5px 3px $back;
+
+    #top {
+        padding: 0 30px;
+        background-color: $colorgrey;
+        display: flex;
+        flex-direction: row-reverse;
+        margin-bottom: 20px;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+
+        .link {
+            width: 1000px;
+            height: 40px;
+            display: inherit;
+            flex-direction: inherit;
+            justify-content: inherit;
+            margin: 0 auto;
+
+            a {
+                color: $colorteal;
+                text-decoration: none;
+                font-size: large;
+                padding: 10px;
+                transition: .3s;
+                // border-radius: 1ex;
+
+                &:hover {
+
+                    color: $textcolor;
+                    transition: .3s;
+
+                }
+            }
+        }
+    }
+}
+
+
+.pic_name {
+    margin: 30px auto;
+    width: 1000px;
+    padding: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    z-index: -1;
+
+    .pict {
+        width: auto;
+    }
+
+    .me {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+
+        .greet {
+            font-size: larger;
+            background-color: $colorgrey;
+            padding: 20px;
+            color: $colorteal;
+            border-radius: 0 20px 0 20px;
+            transition: .3s;
+
+            &:hover {
+                border-radius: 20px 0 20px 0;
+                transition: .3s;
+                color: white;
+            }
+
+            &:first-child {
+                background-color: transparent;
+                color: white;
+                box-shadow: 2px 2px 1px $colorteal;
+                border-radius: 0;
+            }
+        }
+    }
+}
+
+#name {
+    color: $colorteal;
+    font-size: 50px;
+    font-family: $fontcomfort;
+
+}
+._bout{
+    margin-top: 60px;
+#about {
+   background-color: $colorgrey;
+    background-blend-mode: soft-light;
+    position: relative;
+    margin: 20px auto;
+    width: auto;
+    padding:1px 0;
+
+    p {
+        margin: 40px auto;
+        width: 1000px;
+        text-align: justify;
+
+    }
+
+    .about_me {
+        position: absolute;
+        top: -20px;
+        left: 200px;
+        background-color: $colorgrey;
+        width: 200px;
+        padding: 10px;
+        border-radius: 30px;
+        text-align: center;
+        font-size: 20px;
+        color: $colorteal;
+        font-weight: bold;
+        
+    }
+
+
+
+}
+}
+
+.picture {
+    width: 40px;
+    border-radius: 50%;
+
+
+}
+
+.balls {
+
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    z-index: -1;
+    width: auto;
+    height: auto;
+
+    .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        position: relative;
+        margin: 0 auto;
+        width: 800px;
+        height: 400px;
+        // .behind{
+        //     opacity: .4;
+        //     font-size: 100px;
+        //     margin: 20px 3px;
+        // }
+
+        .jump1,
+        .jump2,
+        .jump3,
+        .jump4 {
+            position: absolute;
+            border-radius: 50%;
+            background-color: $colorteal;
+            opacity: .5;
+        }
+
+        .jump1 {
+            top: 7%;
+            left: 20%;
+            width: 200px;
+            height: 200px;
+        }
+
+        .jump2 {
+            width: 100px;
+            height: 100px;
+            top: 7%;
+            left: 15%;
+        }
+
+        .jump3 {
+            width: 100px;
+            height: 100px;
+            top: 20%;
+            right: 30%;
+        }
+    }
+}
+
+.skills{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 1000px;
+    margin: 30px auto;
+    justify-content: space-between;
+}
+.others{
+    background-color: $colorgrey ;
+    
+    width: calc(900px/3);
+    padding: 30px 20px;
+    box-shadow: 2px 2px 1px $colorteal;
+    &:nth-child(even){
+        background-color: $back;
+    }
+   
+}
+.contact_me{
+    width: 1000px;
+    margin: 100px auto;
+    text-align: center;
+    a{
+        width: 200px;
+        padding: 20px;
+        background-color: $colorgrey;
+        border-bottom: 1px solid $colorteal ;
+        border-right: 1px solid $colorteal;
+        text-decoration: none;
+        color:$colorteal;
+        font-size: larger;
+        font-weight: 700;
+        border-radius: 10px;
+        transition: all .3s;
+        &:hover{
+            border-bottom: 3px solid $colorteal;
+            border-right: 3px solid $colorteal;
+            transition: all .3s;
+        }
+    }
+
+}
+
+form{
+    width: 600px;
+    // border: 1px solid $colorteal;
+    // border-radius: 20px;
+    box-shadow: 1px 1px 5px $colorteal;
+    padding: 10px;
+    margin: 50px auto;
+}
+label{
+    color: $colorteal;
+    display: block;
+    margin: 10px;
+    margin-left: 0;
+}
+input,textarea{
+    margin-left: 15px;
+    &:last-child{
+        margin-top: 20px;
+    }
+}
+// #message{
+//     height: 300px;
+//     width: 300px;
+//     text-align: justify;
+// }
+
+#submit{
+    color: $colorteal;
+    background-color: $colorgrey;
+    padding: 10px;
+    border: none;
+    font-size: large;
+    font-weight: 700;
+    border-bottom: 1px solid $colorteal;
+}
+footer{
+    background-color: $colorgrey;
+    height: 300px;
+}

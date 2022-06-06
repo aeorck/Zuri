@@ -9,28 +9,24 @@ body {
   font-weight: 400;
 }
 
-header {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 2px;
-  z-index: 1;
-}
 header #top {
   padding: 0 30px;
   background-color: #393E46;
   display: flex;
   flex-direction: row-reverse;
+  margin: 0 auto;
   margin-bottom: 20px;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
 }
 header #top .link {
-  width: 1000px;
-  height: 40px;
-  display: inherit;
-  flex-direction: inherit;
-  justify-content: inherit;
+  width: 80%;
+  height: 50px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
   margin: 0 auto;
 }
 header #top .link a {
@@ -45,16 +41,20 @@ header #top .link a:hover {
   transition: 0.3s;
 }
 
+main {
+  width: 80%;
+  margin: 0 auto;
+}
+
 .pic_name {
   margin: 30px auto;
-  width: 1000px;
+  width: 100%;
   padding: 20px 0;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  z-index: -1;
 }
 .pic_name .pict {
   width: auto;
@@ -90,23 +90,24 @@ header #top .link a:hover {
   font-family: "Comfortaa", "Times New Roman";
 }
 
-._bout {
+.bout {
   margin-top: 60px;
-}
-._bout #about {
   background-color: #393E46;
+  width: 100%;
+}
+.bout #about {
   background-blend-mode: soft-light;
   position: relative;
   margin: 20px auto;
-  width: auto;
+  width: 100%;
   padding: 1px 0;
 }
-._bout #about p {
+.bout #about p {
   margin: 40px auto;
-  width: 1000px;
+  width: 80%;
   text-align: justify;
 }
-._bout #about .about_me {
+.bout #about .about_me {
   position: absolute;
   top: -20px;
   left: 200px;
@@ -125,63 +126,18 @@ header #top .link a:hover {
   border-radius: 50%;
 }
 
-.balls {
-  position: absolute;
-  top: 20%;
-  left: 10%;
-  z-index: -1;
-  width: auto;
-  height: auto;
-}
-.balls .container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  position: relative;
-  margin: 0 auto;
-  width: 800px;
-  height: 400px;
-}
-.balls .container .jump1,
-.balls .container .jump2,
-.balls .container .jump3,
-.balls .container .jump4 {
-  position: absolute;
-  border-radius: 50%;
-  background-color: #00ADB5;
-  opacity: 0.5;
-}
-.balls .container .jump1 {
-  top: 7%;
-  left: 20%;
-  width: 200px;
-  height: 200px;
-}
-.balls .container .jump2 {
-  width: 100px;
-  height: 100px;
-  top: 7%;
-  left: 15%;
-}
-.balls .container .jump3 {
-  width: 100px;
-  height: 100px;
-  top: 20%;
-  right: 30%;
-}
-
 .skills {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 1000px;
+  width: 100%;
   margin: 30px auto;
   justify-content: space-between;
 }
 
 .others {
   background-color: #393E46;
-  width: 300px;
+  width: 250px;
   padding: 30px 20px;
   box-shadow: 2px 2px 1px #00ADB5;
 }
@@ -190,7 +146,7 @@ header #top .link a:hover {
 }
 
 .contact_me {
-  width: 1000px;
+  width: 80%;
   margin: 100px auto;
   text-align: center;
 }
@@ -215,9 +171,13 @@ header #top .link a:hover {
 
 form {
   width: 600px;
-  box-shadow: 1px 1px 5px #00ADB5;
-  padding: 10px;
-  margin: 50px auto;
+  border: 1px solid #00ADB5;
+  border-top: none;
+  box-shadow: 1px #00ADB5;
+  padding: 20px;
+  margin: 70px auto;
+  padding-bottom: 50px;
+  text-align: center;
 }
 
 label {
@@ -227,24 +187,252 @@ label {
   margin-left: 0;
 }
 
-input, textarea {
-  margin-left: 15px;
+input,
+textarea {
+  margin: 2px auto 20px;
+  width: 300px;
 }
-input:last-child, textarea:last-child {
+input:last-child,
+textarea:last-child {
   margin-top: 20px;
+}
+
+h1 {
+  text-transform: uppercase;
+  margin-bottom: 50px;
+  display: block;
+}
+
+#f_name,
+#mail,
+#password,
+#l_name,
+#country,
+#phone,
+#gender,
+#state {
+  height: 30px;
+}
+
+#gender {
+  color: #EEEEEE;
+  background-color: #222831;
+  border: 1px solid #393E46;
+  font-weight: bold;
+  padding: 5px;
 }
 
 #submit {
   color: #00ADB5;
   background-color: #393E46;
-  padding: 10px;
+  padding: 10px 20px;
   border: none;
   font-size: large;
   font-weight: 700;
-  border: 1px solid #00ADB5;
+  border-bottom: 2px solid #00ADB5;
+  transition: all 0.3s;
+  width: auto;
+}
+#submit:hover {
+  color: white;
+  transition: all 0.3s;
+  border-bottom: 2px solid #EEEEEE;
 }
 
 footer {
   background-color: #393E46;
-  height: 300px;
+  text-align: center;
+  position: relative;
+}
+footer .connect {
+  display: flex;
+  justify-content: space-around;
+  font-size: 20px;
+  padding: 10px;
+  background-color: #00ADB5;
+  margin: 0 auto;
+  width: 250px;
+  border-radius: 30px;
+  border: 5px solid #393E46;
+  position: absolute;
+  top: -25px;
+  left: 10%;
+}
+footer .socials {
+  width: 300px;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .socials .icons {
+  width: 50px;
+  margin: 10px;
+}
+footer .socials .icons img {
+  width: 50px;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+footer .socials .icons img:hover {
+  opacity: 0.5;
+  transition: 0.3s;
+}
+
+@media (max-width: 1000px) {
+  header #top .link {
+    justify-content: space-between;
+  }
+
+  .pic_name {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .pic_name .pict {
+    width: 200px;
+  }
+  .pic_name .me {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .pic_name .me .greet {
+    text-align: center;
+  }
+
+  .picture {
+    margin-right: 10px;
+  }
+
+  #name {
+    font-size: 30px;
+    margin: 20px auto;
+  }
+
+  form {
+    width: 600px;
+  }
+
+  input,
+textarea {
+    width: 400px;
+  }
+
+  .bout {
+    margin-top: 60px;
+    width: 100%;
+  }
+  .bout #about {
+    position: relative;
+    margin: 20px auto;
+    width: 100%;
+    padding: 1px 0;
+  }
+  .bout #about p {
+    margin: 40px auto;
+    text-align: left;
+  }
+  .bout #about .about_me {
+    top: -30px;
+    left: 20px;
+  }
+
+  footer {
+    border-radius: 10px 10px 0 0;
+  }
+  footer .connect {
+    font-size: 20px;
+    width: 250px;
+    left: 35%;
+  }
+  footer .socials .icons {
+    width: 50px;
+  }
+  footer .socials .icons img {
+    width: 40px;
+  }
+
+  .skills {
+    justify-content: space-around;
+  }
+  .skills .others {
+    margin-top: 20px;
+  }
+}
+@media (max-width: 412px) {
+  header #top .link {
+    justify-content: space-evenly;
+  }
+
+  .pic_name {
+    flex-direction: column;
+    align-items: center;
+  }
+  .pic_name .pict {
+    width: 200px;
+  }
+  .pic_name .me {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .pic_name .me .greet {
+    text-align: center;
+  }
+
+  .picture {
+    width: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+
+  #name {
+    font-size: 25px;
+    margin: 20px auto;
+  }
+
+  form {
+    width: 300px;
+  }
+
+  input,
+textarea {
+    width: 200px;
+  }
+
+  .bout {
+    margin-top: 60px;
+    width: 100%;
+  }
+  .bout #about {
+    position: relative;
+    margin: 20px auto;
+    width: 100%;
+    padding: 1px 0;
+  }
+  .bout #about p {
+    margin: 40px auto;
+    text-align: left;
+  }
+  .bout #about .about_me {
+    top: -25px;
+    left: 20px;
+  }
+
+  footer {
+    border-radius: 10px 10px 0 0;
+  }
+  footer .connect {
+    font-size: 10px;
+    width: 125px;
+    left: 35%;
+  }
+  footer .socials .icons {
+    width: 25px;
+  }
+  footer .socials .icons img {
+    width: 25px;
+  }
 }/*# sourceMappingURL=mystle.css.map */

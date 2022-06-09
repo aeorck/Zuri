@@ -188,12 +188,13 @@ label {
 }
 
 input,
-textarea {
+textarea, select {
   margin: 2px auto 20px;
-  width: 300px;
+  width: 500px;
+  font-size: medium;
 }
 input:last-child,
-textarea:last-child {
+textarea:last-child, select:last-child {
   margin-top: 20px;
 }
 
@@ -279,6 +280,19 @@ footer .socials .icons img:hover {
   opacity: 0.5;
   transition: 0.3s;
 }
+footer .links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding-bottom: 15px;
+}
+footer .links a {
+  color: #EEEEEE;
+  text-decoration: none;
+}
+footer .links a:hover {
+  color: #00ADB5;
+}
 
 @media (max-width: 1000px) {
   header #top .link {
@@ -316,7 +330,7 @@ footer .socials .icons img:hover {
   }
 
   input,
-textarea {
+textarea, select {
     width: 400px;
   }
 
@@ -398,7 +412,7 @@ textarea {
   }
 
   input,
-textarea {
+textarea, select {
     width: 200px;
   }
 
